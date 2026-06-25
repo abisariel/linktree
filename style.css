@@ -152,6 +152,7 @@ body {
   border-radius: 50%;
   background: radial-gradient(circle, rgba(26, 159, 255, 0.22) 0%, transparent 70%);
   animation: halo-pulse 3s ease-in-out infinite;
+  will-change: transform, opacity;
   z-index: 0;
 }
 
@@ -171,6 +172,8 @@ body {
   inset: -9px;
   border-color: rgba(0, 180, 255, 0.22);
   animation: spin-cw 14s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .r1::after {
@@ -178,7 +181,7 @@ body {
   position: absolute;
   top: -3px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateZ(0);
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -190,6 +193,8 @@ body {
   inset: -20px;
   border-color: rgba(0, 210, 255, 0.09);
   animation: spin-ccw 22s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .r2::after {
@@ -197,7 +202,7 @@ body {
   position: absolute;
   bottom: -3px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateZ(0);
   width: 5px;
   height: 5px;
   border-radius: 50%;
